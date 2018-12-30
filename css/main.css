@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.fullscrean {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes list {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-6px);
+  }
+}
+
+@keyframes flowerScale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #F5F5F5;
+}
+
+.preloader.hidden {
+  animation: 1s fadeOut ease-in-out;
+}
+
+.preloader .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.preloader .center .text {
+  font-size: 48px;
+  font-family: 'Pacifico', cursive;
+  color: #9E9E9E;
+  animation: 1s fadeIn ease-in-out;
+}
+
+.wallpaper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.05);
+  z-index: 999999999;
+}
+
+.wallpaper .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.wallpaper .content .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3b9ec8;
+}
+
+.wallpaper .content .tree {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: 1s threewind ease-in-out infinite;
+}
+
+.wallpaper .content .tree img {
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: -5px;
+}
+
+.wallpaper .content .tree .flower {
+  position: absolute;
+  animation: 1s flowerScale ease-in-out;
+}
+
+.liner {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+}
